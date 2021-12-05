@@ -1,0 +1,19 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../config/ehcache.xsd">
+<!-- maxElementsInMemory:最大的缓存数量
+	eternal:是否为常量
+	timeToIdleSeconds:最大的钝化时间
+	timeToLiveSeconds:最大的生存时间
+	overflowToDisk:数据溢出时是否需要在磁盘上进行缓存
+ -->
+<defaultCache
+            maxElementsInMemory="100000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="false"
+            maxElementsOnDisk="10000000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"
+            />
+</ehcache>
